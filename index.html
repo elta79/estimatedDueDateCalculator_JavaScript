@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pregnancy Calculator</title>
+        <link rel="stylesheet" href="./index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">    </head>
+    <body>
+        <div class="container">
+            <h2>Due Date Calculator</h2>
+            <h3>Pregnancy Progress and Estimated Due Date</h3>
+            <div class="calc-container">
+                <h4 id="calc-method">Calculation Method:</h4>
+                <div class="radio">
+                    <input type="radio" id="lmp" name="calc-method" value="LMP" onclick="calc()">
+                    <label for="lmp">Last menstrual period</label><br>
+                    <input type="radio" id="conception" name="calc-method" value="Conception" onclick="calc()">
+                    <label for="conception">Conception</label><br>
+                    <input type="radio" id="edd" name="calc-method" value="EDD" onclick="calc()">
+                    <label for="edd">Estimated due date</label><br>
+                </div>
+            </div>  
+            <div class="calc-controls">
+                <input type="date" id="date" name="date"><br>
+                <button id="calc-btn" onclick="calcButton()">Calculate</button>
+                <div id="message-container" style="display:none">            
+                    <p id="message-el"></p>
+                    <p id="numWeeks-el"></p>                    
+                </div>
+            </div>         
+        </div>
+    
+        <script src="./index.js"></script>    
+    </body>
+</html>
